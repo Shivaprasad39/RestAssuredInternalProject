@@ -1,0 +1,290 @@
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/v1/loginManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": "admin",
+    "password": "admin123"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:03 GMT
+Content-Type: application/json
+Content-Length: 173
+Connection: keep-alive
+Server: nginx/1.23.1
+Set-Cookie: SID=QLmXn2T3eScC9ZKD_s8haj2YjdhEfnfmSbZGNU9EhAwReUbBWPq1jOtgswqfMn6AEtp6mWvYMu1FtQEZuBKvVO2uKUDAJaCNi0zrk0FHng; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:03 GMT; Max-Age=43200; HttpOnly
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "id": "5f08311e26bea2e5af37fa06",
+    "root": "manager",
+    "status": 0,
+    "account": "",
+    "nickname": "admin",
+    "email": "",
+    "password": "",
+    "avatarUrl": "",
+    "salt": "",
+    "updateTime": 0,
+    "createTime": 0
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/v1/loginManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": "ShivaFinance1",
+    "password": "Shiva@123"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:05 GMT
+Content-Type: application/json
+Content-Length: 181
+Connection: keep-alive
+Server: nginx/1.23.1
+Set-Cookie: SID=aiH0h7pLAHq7hXaHnjE9dIafm4g200NYmTGDugJ_NLhtYK5moZw3t9U2pogZmUmUgWxya5E73ZaFQKtil4mNi6eRiydDjAJtF_avmFjgpw; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:05 GMT; Max-Age=43200; HttpOnly
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "id": "623dca819e4128cb9e01108c",
+    "root": "finance",
+    "status": 0,
+    "account": "",
+    "nickname": "ShivaFinance1",
+    "email": "",
+    "password": "",
+    "avatarUrl": "",
+    "salt": "",
+    "updateTime": 0,
+    "createTime": 0
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=QLmXn2T3eScC9ZKD_s8haj2YjdhEfnfmSbZGNU9EhAwReUbBWPq1jOtgswqfMn6AEtp6mWvYMu1FtQEZuBKvVO2uKUDAJaCNi0zrk0FHng; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:03 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "GK2209201409071",
+        "receivedAmount": 1000000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:09 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=aiH0h7pLAHq7hXaHnjE9dIafm4g200NYmTGDugJ_NLhtYK5moZw3t9U2pogZmUmUgWxya5E73ZaFQKtil4mNi6eRiydDjAJtF_avmFjgpw; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:05 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "GK2209201409071",
+        "receivedAmount": 1000000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:10 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=QLmXn2T3eScC9ZKD_s8haj2YjdhEfnfmSbZGNU9EhAwReUbBWPq1jOtgswqfMn6AEtp6mWvYMu1FtQEZuBKvVO2uKUDAJaCNi0zrk0FHng; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:03 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "JA2209201409141",
+        "receivedAmount": 50000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:16 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=aiH0h7pLAHq7hXaHnjE9dIafm4g200NYmTGDugJ_NLhtYK5moZw3t9U2pogZmUmUgWxya5E73ZaFQKtil4mNi6eRiydDjAJtF_avmFjgpw; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:05 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "JA2209201409141",
+        "receivedAmount": 50000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:17 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=QLmXn2T3eScC9ZKD_s8haj2YjdhEfnfmSbZGNU9EhAwReUbBWPq1jOtgswqfMn6AEtp6mWvYMu1FtQEZuBKvVO2uKUDAJaCNi0zrk0FHng; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:03 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "PS2209201409191",
+        "receivedAmount": 1000000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:21 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}
+Request method:	POST
+Request URI:	https://erp-dev.gclubdev.net/api/graphqlManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=aiH0h7pLAHq7hXaHnjE9dIafm4g200NYmTGDugJ_NLhtYK5moZw3t9U2pogZmUmUgWxya5E73ZaFQKtil4mNi6eRiydDjAJtF_avmFjgpw; Path=/; Domain=gclubdev.net; Expires=Wed, 21 Sep 2022 02:09:05 GMT; Max-Age=43200; HttpOnly=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "ConfirmPayment",
+    "variables": {
+        "orderId": "PS2209201409191",
+        "receivedAmount": 1000000
+    },
+    "query": "mutation ConfirmPayment($orderId: String!, $receivedAmount: Int) {\n  confirmPayment(orderId: $orderId, receivedAmount: $receivedAmount)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:23 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 42
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "confirmPayment": true
+    }
+}

@@ -1,0 +1,79 @@
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/v1/loginMember
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "shiva4.test+090_@gmail.com",
+    "password": "Shiva@121",
+    "token": null
+}
+HTTP/1.1 200 OK
+Date: Mon, 05 Sep 2022 19:30:22 GMT
+Content-Type: application/json
+Content-Length: 19
+Connection: keep-alive
+Server: nginx/1.23.1
+Set-Cookie: SID=L5pIRYqth1CZDRSumLqcyB6gUF1YKJCtUr5ktab8sfHzINsWVU-6dR1w-IQOB814_LOTpofFD5lnbqoNIMvbMiN0Cn9YMfx_KYasiXIxtA; Path=/; Domain=gclubdev.net; Expires=Wed, 05 Oct 2022 19:30:22 GMT; Max-Age=2592000; HttpOnly; Secure
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "state": "success"
+}
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/v1/loginManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": "admin",
+    "password": "admin123"
+}
+HTTP/1.1 404 Not Found
+Date: Mon, 05 Sep 2022 19:30:24 GMT
+Content-Type: text/plain
+Content-Length: 18
+Connection: keep-alive
+Server: nginx/1.23.1
+
+404 page not found
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/v1/loginManager
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "account": "ShivaFinD",
+    "password": "Shiva@1212"
+}
+HTTP/1.1 404 Not Found
+Date: Mon, 05 Sep 2022 19:30:26 GMT
+Content-Type: text/plain
+Content-Length: 18
+Connection: keep-alive
+Server: nginx/1.23.1
+
+404 page not found

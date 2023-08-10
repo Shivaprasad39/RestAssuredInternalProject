@@ -1,0 +1,440 @@
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/v1/loginMember
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "shiva4.test+134_@gmail.com",
+    "password": "Shiva@1212",
+    "token": null
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:00 GMT
+Content-Type: application/json
+Content-Length: 19
+Connection: keep-alive
+Server: nginx/1.23.1
+Set-Cookie: SID=Hp6dNaZwobjscj_xC06VflLbSqDJdS9s3ChErsW5SW69EDrGY5ym_VimhVHhXgfIWeIYRN5gd-rzZpT6EvJ74dq3YuSbl4go6cuoYEXzPg; Path=/; Domain=gclubdev.net; Expires=Thu, 20 Oct 2022 14:09:00 GMT; Max-Age=2592000; HttpOnly; Secure
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "state": "success"
+}
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=Hp6dNaZwobjscj_xC06VflLbSqDJdS9s3ChErsW5SW69EDrGY5ym_VimhVHhXgfIWeIYRN5gd-rzZpT6EvJ74dq3YuSbl4go6cuoYEXzPg; Path=/; Domain=gclubdev.net; Expires=Thu, 20 Oct 2022 14:09:00 GMT; Max-Age=2592000; HttpOnly; Secure=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "placeOrder",
+    "variables": {
+        "items": [
+            {
+                "itemCode": "MT1",
+                "quantity": "1",
+                "membershipId": ""
+            }
+        ],
+        "paymentMethod": {
+            "payClassify": "Cheque",
+            "payAccountName": "",
+            "payAccountId": ""
+        }
+    },
+    "query": "mutation placeOrder($items: [itemInput]!, $paymentMethod: paymentMethodInput!) {\n  placeOrder(items: $items, paymentMethod: $paymentMethod)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:07 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 61
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "placeOrder": " orderNo: GK2209201409071"
+    }
+}
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=Hp6dNaZwobjscj_xC06VflLbSqDJdS9s3ChErsW5SW69EDrGY5ym_VimhVHhXgfIWeIYRN5gd-rzZpT6EvJ74dq3YuSbl4go6cuoYEXzPg; Path=/; Domain=gclubdev.net; Expires=Thu, 20 Oct 2022 14:09:00 GMT; Max-Age=2592000; HttpOnly; Secure=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "getListMembershipDetails",
+    "variables": {
+        "page": 1,
+        "perPage": 200
+    },
+    "query": "query getListMembershipDetails($status: cardStatusEnumType, $perPage: Int!, $page: Int!) {\n  listMembershipDetails(status: $status, perPage: $perPage, page: $page) {\n    count\n    list {\n      id\n      card\n      createTime\n      expiryTime\n      level\n      status\n      orderNo\n      boundAccounts {\n        appAccount\n        application\n        id\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:12 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "listMembershipDetails": {
+            "__typename": "CardList",
+            "count": 18,
+            "list": [
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "123456784",
+                    "createTime": 1662843528,
+                    "expiryTime": 1694379528,
+                    "id": "631cfa88ded459219d1cc3be",
+                    "level": 4,
+                    "orderNo": "RC2209102058081",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057329",
+                    "createTime": 1662843656,
+                    "expiryTime": 1725915656,
+                    "id": "631cfb08ded459219d1cc3bf",
+                    "level": 1,
+                    "orderNo": "CY2209102100521",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057336",
+                    "createTime": 1662844008,
+                    "expiryTime": 1725916008,
+                    "id": "631cfc68ded459219d1cc3c0",
+                    "level": 1,
+                    "orderNo": "XH2209102106431",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057343",
+                    "createTime": 1662844789,
+                    "expiryTime": 1725916789,
+                    "id": "631cff75ded459219d1cc3c1",
+                    "level": 1,
+                    "orderNo": "EV2209102119451",
+                    "status": "Withdrawn"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057350",
+                    "createTime": 1662845243,
+                    "expiryTime": 1725917243,
+                    "id": "631d013bded459219d1cc3c2",
+                    "level": 1,
+                    "orderNo": "MY2209102127201",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057367",
+                    "createTime": 1662845836,
+                    "expiryTime": 1725917836,
+                    "id": "631d038cded459219d1cc3c3",
+                    "level": 2,
+                    "orderNo": "GJ2209102137111",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057374",
+                    "createTime": 1662845914,
+                    "expiryTime": 1725917914,
+                    "id": "631d03daded459219d1cc3c4",
+                    "level": 2,
+                    "orderNo": "VY2209102138301",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057404",
+                    "createTime": 1663012968,
+                    "expiryTime": 1726084968,
+                    "id": "631f906834bc42d5fc2b6507",
+                    "level": 2,
+                    "orderNo": "XU2209122002441",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057411",
+                    "createTime": 1663015077,
+                    "expiryTime": 1726087077,
+                    "id": "631f98a534bc42d5fc2b6508",
+                    "level": 2,
+                    "orderNo": "CC2209122037521",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057428",
+                    "createTime": 1663015401,
+                    "expiryTime": 1726087401,
+                    "id": "631f99e934bc42d5fc2b6509",
+                    "level": 2,
+                    "orderNo": "BM2209122043171",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057435",
+                    "createTime": 1663071313,
+                    "expiryTime": 1726143313,
+                    "id": "6320745134bc42d5fc2b650a",
+                    "level": 2,
+                    "orderNo": "AH2209131215101",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057640",
+                    "createTime": 1663155843,
+                    "expiryTime": 1726227843,
+                    "id": "6321be8350bf337dcbf6ff8c",
+                    "level": 2,
+                    "orderNo": "EL2209141143591",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057657",
+                    "createTime": 1663157119,
+                    "expiryTime": 1726229119,
+                    "id": "6321c37f50bf337dcbf6ff8d",
+                    "level": 2,
+                    "orderNo": "XJ2209141205151",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057664",
+                    "createTime": 1663176380,
+                    "expiryTime": 1726248380,
+                    "id": "63220ebcd86abe97442f61c1",
+                    "level": 2,
+                    "orderNo": "FQ2209141726161",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057671",
+                    "createTime": 1663181796,
+                    "expiryTime": 1726253796,
+                    "id": "632223e4d86abe97442f61c2",
+                    "level": 2,
+                    "orderNo": "KN2209141856311",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057688",
+                    "createTime": 1663182445,
+                    "expiryTime": 1726254445,
+                    "id": "6322266dd86abe97442f61c3",
+                    "level": 2,
+                    "orderNo": "ZZ2209141907211",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057756",
+                    "createTime": 1663673273,
+                    "expiryTime": 1726745273,
+                    "id": "6329a3b96f0ba16698dac8f8",
+                    "level": 2,
+                    "orderNo": "ND2209201127501",
+                    "status": "Active"
+                },
+                {
+                    "__typename": "Card",
+                    "boundAccounts": [
+                        
+                    ],
+                    "card": "70220000001057770",
+                    "createTime": 1663682950,
+                    "expiryTime": 1695218950,
+                    "id": "6329c986926d495e248f7bf3",
+                    "level": 1,
+                    "orderNo": "GK2209201409071",
+                    "status": "Active"
+                }
+            ]
+        }
+    }
+}
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=Hp6dNaZwobjscj_xC06VflLbSqDJdS9s3ChErsW5SW69EDrGY5ym_VimhVHhXgfIWeIYRN5gd-rzZpT6EvJ74dq3YuSbl4go6cuoYEXzPg; Path=/; Domain=gclubdev.net; Expires=Thu, 20 Oct 2022 14:09:00 GMT; Max-Age=2592000; HttpOnly; Secure=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "placeOrder",
+    "variables": {
+        "items": [
+            {
+                "itemCode": "MR1",
+                "quantity": "1",
+                "membershipId": "70220000001057770"
+            }
+        ],
+        "paymentMethod": {
+            "payClassify": "Cheque",
+            "payAccountName": "",
+            "payAccountId": ""
+        }
+    },
+    "query": "mutation placeOrder($items: [itemInput]!, $paymentMethod: paymentMethodInput!) {\n  placeOrder(items: $items, paymentMethod: $paymentMethod)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:14 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 61
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "placeOrder": " orderNo: JA2209201409141"
+    }
+}
+Request method:	POST
+Request URI:	https://www-dev.gclubdev.net/api/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		SID=Hp6dNaZwobjscj_xC06VflLbSqDJdS9s3ChErsW5SW69EDrGY5ym_VimhVHhXgfIWeIYRN5gd-rzZpT6EvJ74dq3YuSbl4go6cuoYEXzPg; Path=/; Domain=gclubdev.net; Expires=Thu, 20 Oct 2022 14:09:00 GMT; Max-Age=2592000; HttpOnly; Secure=null
+Multiparts:		<none>
+Body:
+{
+    "operationName": "placeOrder",
+    "variables": {
+        "items": [
+            {
+                "itemCode": "MU12",
+                "quantity": "1",
+                "membershipId": "70220000001057770"
+            }
+        ],
+        "paymentMethod": {
+            "payClassify": "Cheque",
+            "payAccountName": "",
+            "payAccountId": ""
+        }
+    },
+    "query": "mutation placeOrder($items: [itemInput]!, $paymentMethod: paymentMethodInput!) {\n  placeOrder(items: $items, paymentMethod: $paymentMethod)\n}\n"
+}
+HTTP/1.1 200 OK
+Date: Tue, 20 Sep 2022 14:09:19 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 61
+Connection: keep-alive
+Server: nginx/1.23.1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+
+{
+    "data": {
+        "placeOrder": " orderNo: PS2209201409191"
+    }
+}
